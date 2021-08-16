@@ -35,11 +35,20 @@ const toggleUserState2 = (allUsers, userName) => {
     });
 };
 
+
 const logger2 = updatedUsers => console.table(updatedUsers);
 
+/*
+ * Сейчас работает так
+ */
+toggleUserState2(users, "Mango", logger2);
+toggleUserState2(users, "Lux", logger2);
+
+/*
+ * Должно работать так
+ */
 toggleUserState2(users, "Mango").then(logger2);
 toggleUserState2(users, "Lux").then(logger2);
-
 //HW 3
 
 const randomIntegerFromInterval = (min, max) => {
